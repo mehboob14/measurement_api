@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: measurement-api
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app.run:app
+    plan: free
